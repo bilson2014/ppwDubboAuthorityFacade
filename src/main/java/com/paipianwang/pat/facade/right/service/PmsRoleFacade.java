@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.paipianwang.pat.facade.right.entity.PmsRole;
 
+
 /**
  * 角色接口
  */

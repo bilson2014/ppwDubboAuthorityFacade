@@ -32,8 +32,8 @@ public class SessionInfo extends BaseEntity {
 	
 	private boolean isIdentification = false; // 供应商是否被审核
 	
-	//add by wanglc 缓存手机号信息
-	private String  telephone = null;//手机号
+	//add by wanglc 缓存手机号
+	private String telephone = null; // 手机号
 	
 	public String getTelephone() {
 		return telephone;
@@ -83,13 +83,6 @@ public class SessionInfo extends BaseEntity {
 		this.superAdmin = superAdmin;
 	}
 	
-	public boolean hasRight(final PmsRight right){
-		int pos = right.getPos();
-		long code = right.getCode();
-		long ret = sum[pos] & code;
-		return !(ret == 0);
-	}
-
 	public String getLoginName() {
 		return loginName;
 	}
@@ -129,6 +122,13 @@ public class SessionInfo extends BaseEntity {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	public boolean hasRight(final PmsRight right){
+		int pos = right.getPos();
+		long code = right.getCode();
+		long ret = sum[pos] & code;
+		return !(ret == 0);
+	}
 
 	public String getPhoto() {
 		return photo;
@@ -153,5 +153,4 @@ public class SessionInfo extends BaseEntity {
 	public void setIsIdentification(boolean isIdentification) {
 		this.isIdentification = isIdentification;
 	}
-	
 }

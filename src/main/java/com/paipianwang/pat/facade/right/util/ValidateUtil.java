@@ -1,6 +1,7 @@
 package com.paipianwang.pat.facade.right.util;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
@@ -12,35 +13,34 @@ import com.paipianwang.pat.facade.right.entity.SessionInfo;
 
 
 public class ValidateUtil {
-
-	public static boolean isValid(final String str) {
-
-		if (str != null && !"".equals(str)) {
-
+	
+	public static boolean isValid(final String str){
+		
+		if(str !=null && !"".equals(str)){
+			
 			return true;
 		}
 		return false;
 	}
-
-	public static boolean isValid(final String[] str) {
-
-		if (str != null && str.length > 0) {
-
+	
+	public static boolean isValid(final String[] str){
+		
+		if(str != null && str.length > 0){
+			
 			return true;
 		}
 		return false;
 	}
-
+	
 	@SuppressWarnings("rawtypes")
-	public static boolean isValid(final Collection col) {
-
-		if (col == null || col.isEmpty()) {
+	public static boolean isValid(final Collection col){
+		
+		if(col == null || col.isEmpty()){
 			return false;
 		}
-
+		
 		return true;
 	}
-
 	/**
 	 * 判断是否有权限
 	 */
@@ -75,35 +75,38 @@ public class ValidateUtil {
 
 		return false;
 	}
-
 	public static boolean isValid(final long[] ids) {
-
-		if (ids != null && ids.length > 0) {
+		 
+		if(ids != null && ids.length > 0){
 			return true;
 		}
 		return false;
 	}
 
 	@SuppressWarnings("rawtypes")
-	public static boolean isValid(Map map) {
-
-		if (map != null && !map.isEmpty()) {
+	public static boolean isValid(final Map map) {
+		
+		if(map != null && !map.isEmpty()){
 			return true;
 		}
 		return false;
 	}
 	
-	
-	/**
-	 * 过滤掉Emoji表情
-	 * @param source
-	 * @return
-	 */
-	public static String filterEmoji(String source) {
-		if (ValidateUtil.isValid(source)) {
-			return source.replaceAll("[\\ud800\\udc00-\\udbff\\udfff\\ud800-\\udfff]", "");
-		} else {
-			return null;
+	@SuppressWarnings("rawtypes")
+	public static boolean isValid(final List list){
+		
+		if(list != null && !list.isEmpty()){
+			return true;
 		}
+		return false;
 	}
+	
+	public static boolean isValid(final Long id){
+		
+		if(id != null){
+			return true;
+		}
+		return false;
+	}
+	
 }

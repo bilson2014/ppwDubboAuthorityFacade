@@ -3,7 +3,7 @@ package com.paipianwang.pat.facade.right.entity;
 import java.util.List;
 
 import com.paipianwang.pat.common.entity.BaseEntity;
-import com.paipianwang.pat.facade.right.util.ValidateUtil;
+import com.paipianwang.pat.common.util.ValidateUtil;
 
 
 public class Customer extends BaseEntity {
