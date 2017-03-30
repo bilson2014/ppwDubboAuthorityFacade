@@ -5,8 +5,13 @@ import java.util.List;
 import com.paipianwang.pat.common.entity.BaseEntity;
 import com.paipianwang.pat.common.util.ValidateUtil;
 
-
-public class Customer extends BaseEntity {
+/**
+ * 用户实体类
+ * 用来承载角色以及是否判断有权限
+ * @author Jack
+ *
+ */
+public class PmsCustomer extends BaseEntity {
 
 	private static final long serialVersionUID = 6521681631221853496L;
 
@@ -63,7 +68,7 @@ public class Customer extends BaseEntity {
 	public void setRightSum(long[] rightSum) {
 		this.rightSum = rightSum;
 	}
-	
+
 	/**
 	 * 判断用户是否有指定的权限
 	 */
