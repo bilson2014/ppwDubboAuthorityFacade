@@ -14,7 +14,11 @@ import com.paipianwang.pat.facade.right.entity.PmsTree;
  */
 public interface PmsRightFacade {
 
-	public List<PmsRight> all();
+	/**
+	 * 获取所有权限集合
+	 * @return 权限集合
+	 */
+	public List<PmsRight> findAllRights();
 	
 	public DataGrid<PmsRight> listWithPagination(PageParam param, Map<String, Object> paramMap);
 	
@@ -85,4 +89,10 @@ public interface PmsRightFacade {
 	 * @return
 	 */
 	public List<Long> findRightsByRole(long roleId);
+	
+	/**
+	 * 更新 Redis 中的权限集合
+	 * @param map 权限集合
+	 */
+	public void resetRightOnRedis(final Map<String, PmsRight> map);
 }

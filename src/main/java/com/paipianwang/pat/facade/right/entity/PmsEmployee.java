@@ -32,7 +32,6 @@ public class PmsEmployee extends PmsCustomer {
 
 	private String email = null; // 邮箱
 
-	// laowang add
 	private String qqUnique = null; // QQToken
 
 	private String wbUnique = null; // 微博Token
