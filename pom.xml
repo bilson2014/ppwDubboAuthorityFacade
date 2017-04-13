@@ -12,10 +12,10 @@
 	<artifactId>pat-facade-right</artifactId>
 	<version>${pat-facade-right.version}</version>
 	<packaging>jar</packaging>
-	
+
 	<name>pat-facade-right</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -28,6 +28,10 @@
 			<groupId>com.paipianwang.pat</groupId>
 			<artifactId>pat-common</artifactId>
 			<version>${pat-common.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
 		</dependency>
 	</dependencies>
 </project>
