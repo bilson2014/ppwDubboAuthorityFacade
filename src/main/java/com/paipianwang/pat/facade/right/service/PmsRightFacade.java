@@ -95,4 +95,10 @@ public interface PmsRightFacade {
 	 * @param map 权限集合
 	 */
 	public void resetRightOnRedis(final Map<String, PmsRight> map);
+	
+	/**
+	 * 新增/更新 Redis 中的单条权限记录
+	 * @param right
+	 */
+	public void addRightByRedis(PmsRight right);
 }

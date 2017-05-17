@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.google.gson.Gson;
+import com.paipianwang.pat.common.entity.BaseEntity;
 import com.paipianwang.pat.common.util.ValidateUtil;
 import com.paipianwang.pat.facade.right.entity.PmsRight;
 /**
@@ -59,6 +60,16 @@ public class RedisUtils {
 		if(obj != null){
 			final Gson gson = new Gson();
 			final String str = gson.toJson(obj);
+			return str;
+		}
+		return null;
+	}
+	
+	public static String toJson(final BaseEntity t) {
+			
+		if(t != null){
+			final Gson gson = new Gson();
+			final String str = gson.toJson(t);
 			return str;
 		}
 		return null;
