@@ -178,4 +178,19 @@ public interface PmsEmployeeFacade {
 	 * @return 
 	 */
 	public long updateUniqueId(PmsEmployee employee);
+	
+	/**
+	 * 根据角色名字获取员工列表
+	 * @param roleList
+	 * @return
+	 */
+	public List<PmsEmployee> findEmployeeByRoleName(List<String> roleNameList);
+	
+	/**
+	 * 根据角色名ID取员工列表
+	 * @param roleList
+	 * @return
+	 */
+	public List<PmsEmployee> findEmployeeByRoleId(List<Long> roleIdList);
+	
 }

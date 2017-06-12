@@ -3,6 +3,7 @@ package com.paipianwang.pat.facade.right.entity;
 import java.util.List;
 
 import com.paipianwang.pat.facade.right.entity.PmsCustomer;
+
 /**
  * 职工表
  */
@@ -11,7 +12,7 @@ public class PmsEmployee extends PmsCustomer {
 	private static final long serialVersionUID = -2956477405160485997L;
 
 	private String employeeLoginName = null; // 职工登录名
-	
+
 	private long employeeId = 0l; // 职工ID
 
 	private String employeeRealName = null; // 职工姓名
@@ -26,11 +27,15 @@ public class PmsEmployee extends PmsCustomer {
 
 	private List<Long> roleIds = null; // 角色ID集合
 
-	private String employeeImg = null;
+	private String roleNameGroup = null; // 角色名称
+
+	private String employeeImg = null; // 头像
 
 	private String phoneNumber = null; // 电话号码
 
 	private String email = null; // 邮箱
+
+	private String hireDate = null; // 入职时间
 
 	private String qqUnique = null; // QQToken
 
@@ -42,23 +47,40 @@ public class PmsEmployee extends PmsCustomer {
 
 	private Integer dimissionStatus = null; // 离职状态
 
+	private Integer flag = null; // 状态位 1：非测试账户 2：测试账户
+
 	public final static String LTYPE_WEIBO = "weibo";
 
 	public final static String LTYPE_QQ = "qq";
 
 	public final static String LTYPE_WECHAT = "wechat";
-	
+
 	public final static int DIMISSIONSTATUS_TEST = 2;// 测试
 
 	public final static int DIMISSIONSTATUS_DIMISSION = 1; // 离职
 
 	public final static int DIMISSIONSTATUS_IN_SERVICE = 0;// 在职
-	
+
+	public String getRoleNameGroup() {
+		return roleNameGroup;
+	}
+
+	public void setRoleNameGroup(String roleNameGroup) {
+		this.roleNameGroup = roleNameGroup;
+	}
+
+	public String getHireDate() {
+		return hireDate;
+	}
+
+	public void setHireDate(String hireDate) {
+		this.hireDate = hireDate;
+	}
 
 	public String getQqUnique() {
 		return qqUnique;
 	}
-	
+
 	public Integer getDimissionStatus() {
 		return dimissionStatus;
 	}
@@ -181,6 +203,14 @@ public class PmsEmployee extends PmsCustomer {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public Integer getFlag() {
+		return flag;
+	}
+
+	public void setFlag(Integer flag) {
+		this.flag = flag;
 	}
 
 }

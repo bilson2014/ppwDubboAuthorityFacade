@@ -11,6 +11,8 @@ public class PmsTree implements Serializable {
 	
 	private String text;
 	
+	private String desc; // 备注
+	
 	private String state = "open";// open,closed
 	
 	private boolean checked = false;
@@ -97,4 +99,12 @@ public class PmsTree implements Serializable {
 		this.od = od;
 	}
 
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+	
 }
