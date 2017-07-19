@@ -193,4 +193,11 @@ public interface PmsEmployeeFacade {
 	 */
 	public List<PmsEmployee> findEmployeeByRoleId(List<Long> roleIdList);
 	
+	/**
+	 * 根据条件获取员工
+	 * @param paramMap
+	 * @return
+	 */
+	public List<PmsEmployee> findEmployeeByCondition(Map<String, Object> paramMap);
+	
 }
