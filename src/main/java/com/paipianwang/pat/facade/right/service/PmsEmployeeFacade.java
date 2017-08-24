@@ -200,4 +200,11 @@ public interface PmsEmployeeFacade {
 	 */
 	public List<PmsEmployee> findEmployeeByCondition(Map<String, Object> paramMap);
 	
+	/**
+	 * 员工个人信息修改
+	 * @param employee
+	 * @return
+	 */
+	public long updateSelf(PmsEmployee employee);
+	
 }
