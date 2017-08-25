@@ -206,5 +206,7 @@ public interface PmsEmployeeFacade {
 	 * @return
 	 */
 	public long updateSelf(PmsEmployee employee);
+	public long updatePhoneById(final PmsEmployee employee);
+	public long updateEmailById(final PmsEmployee employee);
 	
 }
